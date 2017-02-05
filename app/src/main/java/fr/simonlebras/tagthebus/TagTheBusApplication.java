@@ -6,10 +6,14 @@ import android.os.StrictMode;
 
 import com.squareup.leakcanary.LeakCanary;
 
+import fr.simonlebras.tagthebus.injection.components.ApplicationComponent;
+import fr.simonlebras.tagthebus.injection.components.DaggerApplicationComponent;
+import fr.simonlebras.tagthebus.injection.modules.ApplicationModule;
 import timber.log.Timber;
 
+public class TagTheBusApplication extends Application {
+    private ApplicationComponent applicationComponent;
 
-public final class TagTheBusApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
@@ -42,5 +46,13 @@ public final class TagTheBusApplication extends Application {
             }
             StrictMode.setVmPolicy(builder.build());
         }
+
+        applicationComponent = DaggerApplicationComponent.builder()
+                .applicationModule(new ApplicationModule(this))
+                .build();
+    }
+
+    public ApplicationComponent getApplicationComponent() {
+        return applicationComponent;
     }
 }

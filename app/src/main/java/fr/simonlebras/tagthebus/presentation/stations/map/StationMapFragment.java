@@ -135,15 +135,10 @@ public class StationMapFragment extends BaseFragment<StationMapPresenter, Statio
     }
 
     @Override
-    public void onActivityCreated(@Nullable final Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
-
-        presenter.onAttachView(this);
-    }
-
-    @Override
     public void onStart() {
         super.onStart();
+
+        presenter.onAttachView(this);
 
         mapView.onStart();
     }
@@ -266,6 +261,12 @@ public class StationMapFragment extends BaseFragment<StationMapPresenter, Statio
 
     @Override
     public void displayStationList(final List<StationModel> stations) {
+        googleMap.clear();
+
+        if (currentLocation != null) {
+            displayCurrentLocation(currentLocation, false);
+        }
+
         final BitmapDescriptor bitmapDescriptor = BitmapDescriptorFactory.fromResource(R.drawable.ic_place_red_48dp);
 
         for (int i = 0, size = stations.size(); i < size; i++) {

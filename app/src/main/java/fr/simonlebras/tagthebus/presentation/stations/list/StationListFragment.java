@@ -100,8 +100,8 @@ public class StationListFragment extends BaseFragment<StationListPresenter, Stat
     }
 
     @Override
-    public void onActivityCreated(@Nullable final Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
+    public void onStart() {
+        super.onStart();
 
         presenter.onAttachView(this);
 

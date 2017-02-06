@@ -58,8 +58,8 @@ public abstract class BaseFragment<P extends BasePresenter<V>, V extends BaseVie
     }
 
     @Override
-    public void onActivityCreated(@Nullable final Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
+    public void onStart() {
+        super.onStart();
 
         restorePresenter();
     }

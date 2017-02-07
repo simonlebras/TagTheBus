@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="72dp"
+                android:background="@drawable/list_item_selector"
+                tools:context=".presentation.pictures.PictureListActivity">
+
+    <ImageView
+        android:id="@+id/image_picture_thumbnail"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="?attr/listPreferredItemPaddingLeft"
+        android:layout_marginTop="16dp"
+        android:contentDescription="@string/image_picture_thumbnail_description"
+        android:scaleType="centerCrop"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="?attr/listPreferredItemPaddingRight"
+        android:layout_marginStart="16dp"
+        android:layout_toEndOf="@id/image_picture_thumbnail"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/text_picture_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textAlignment="viewStart"
+            android:textColor="@color/colorPrimaryText"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:id="@+id/text_picture_created_at"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textAlignment="viewStart"
+            android:textColor="@color/colorSecondaryText"
+            android:textSize="14sp"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -3,11 +3,15 @@
 
     <string name="google_maps_api_key">AIzaSyAcwQeXYSgtrYeteT_MUAa42cYinVIw3e8</string>
 
-    <string name="label_stations">Stations</string>
+    <string name="label_picture_creation">Ajouter une photo</string>
 
     <string name="title_map">Carte</string>
     <string name="title_list">Liste</string>
     <string name="title_location">Géolocalisation</string>
+    <string name="title_share">Partager</string>
+    <string name="title_validate">Valider</string>
+    <string name="title_delete">Supprimer</string>
+    <string name="title_mode">%1$s sélectionné(s)</string>
 
     <string name="image_marker_icon_description">Voir les photos</string>
 
@@ -15,11 +19,20 @@
     <string name="location_permission_denied">Autorisation de l\'application refusée. Vérifiez vos paramètres.</string>
 
     <string name="request_current_location_failed">Position indisponible.</string>
-    <string name="load_station_list_failed">Une erreur est survenue lors du chargement.</string>
 
     <string name="action_allow">AUTORISER</string>
     <string name="action_retry">RÉESSAYER</string>
 
-    <string name="empty_view_text">Aucune station pour le moment</string>
-    <string name="image_empty_view_description">Aucune station pour le moment</string>
+    <string name="no_station">Aucune station pour le moment</string>
+
+    <string name="image_picture_thumbnail_description">Image de la station</string>
+
+    <string name="no_picture">Aucune photo pour le moment</string>
+
+    <string name="error_occured">Une erreur est survenue.</string>
+
+    <string name="hint_title">Titre</string>
+
+    <string name="title_required">Veuillez entrer un titre.</string>
+    <string name="picture_required">Veuillez prendre une photo.</string>
 </resources>

@@ -36,7 +36,8 @@ class StationListAdapter extends RecyclerView.Adapter<StationListAdapter.ViewHol
         viewHolder.itemView.setOnClickListener(v -> {
             final int position = viewHolder.getAdapterPosition();
             if (position != NO_POSITION) {
-                fragment.onStationSelected(stations.get(position).id());
+                final StationModel station = stations.get(position);
+                fragment.onStationSelected(station.id(), station.streetName());
             }
         });
 

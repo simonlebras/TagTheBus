@@ -46,7 +46,6 @@ public class StationActivity extends BaseActivity implements StationMapFragment.
         setContentView(R.layout.activity_station);
         ButterKnife.bind(this);
 
-        toolbar.setTitle(R.string.label_stations);
         setSupportActionBar(toolbar);
 
         //restore previous state

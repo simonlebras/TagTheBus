@@ -36,7 +36,7 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:contentDescription="@string/image_empty_view_description"
+            android:contentDescription="@string/no_station"
             app:srcCompat="@drawable/ic_directions_bus_grey_144dp"/>
 
         <TextView
@@ -47,7 +47,7 @@
             android:layout_marginTop="16dp"
             android:ellipsize="end"
             android:maxLines="1"
-            android:text="@string/empty_view_text"
+            android:text="@string/no_station"
             android:textColor="@color/colorSecondaryText"
             android:textSize="16sp"/>
 

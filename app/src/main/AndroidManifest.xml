@@ -11,7 +11,7 @@
 
     <uses-feature
         android:name="android.hardware.camera"
-        android:required="false"/>
+        android:required="true"/>
 
     <application
         android:name=".TagTheBusApplication"
@@ -25,12 +25,43 @@
         <activity
             android:name=".presentation.stations.StationActivity"
             android:label="@string/app_name"
+            android:launchMode="singleTop"
             android:theme="@style/AppTheme.Launcher">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".presentation.pictures.PictureListActivity"
+            android:launchMode="singleTop"
+            android:parentActivityName=".presentation.stations.StationActivity"/>
+
+        <activity
+            android:name=".presentation.pictures.PictureCreationActivity"
+            android:label="@string/label_picture_creation"
+            android:parentActivityName=".presentation.pictures.PictureListActivity"/>
+
+        <activity
+            android:name=".presentation.pictures.PictureFullscreenActivity"
+            android:parentActivityName=".presentation.pictures.PictureListActivity"/>
+
+        <provider
+            android:name=".data.pictures.provider.PictureProvider"
+            android:authorities="${applicationId}"
+            android:exported="false"
+            android:protectionLevel="signature"/>
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${filesAuthority}"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths"/>
+        </provider>
 
         <meta-data
             android:name="com.google.android.gms.version"

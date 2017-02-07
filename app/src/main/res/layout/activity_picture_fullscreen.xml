@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/partial_toolbar"
+        layout="@layout/partial_toolbar"/>
+
+    <ImageView
+        android:id="@+id/image_picture_thumbnail"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="16dp"
+        android:contentDescription="@string/image_picture_thumbnail_description"
+        android:scaleType="centerInside"/>
+
+</LinearLayout>

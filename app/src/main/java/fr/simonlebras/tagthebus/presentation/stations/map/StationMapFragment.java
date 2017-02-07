@@ -255,7 +255,7 @@ public class StationMapFragment extends BaseFragment<StationMapPresenter, Statio
         final String tag = (String) marker.getTag();
         //check if the marker is not the current location marker
         if (tag != null) {
-            navigator.navigateToPictureList(getContext(), (String) marker.getTag());
+            navigator.navigateToPictureList(getContext(), tag, marker.getTitle());
         }
     }
 
@@ -281,7 +281,7 @@ public class StationMapFragment extends BaseFragment<StationMapPresenter, Statio
 
     @Override
     public void showLoadStationListError() {
-        Snackbar.make(getView(), R.string.load_station_list_failed, Snackbar.LENGTH_INDEFINITE)
+        Snackbar.make(getView(), R.string.error_occured, Snackbar.LENGTH_INDEFINITE)
                 .setAction(R.string.action_retry, v -> presenter.loadStationList())
                 .show();
     }

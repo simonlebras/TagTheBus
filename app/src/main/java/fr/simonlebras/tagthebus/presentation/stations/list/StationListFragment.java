@@ -147,8 +147,8 @@ public class StationListFragment extends BaseFragment<StationListPresenter, Stat
         showRetryAction();
     }
 
-    public void onStationSelected(final String stationId) {
-        navigator.navigateToPictureList(getContext(), stationId);
+    public void onStationSelected(final String stationId, final String stationName) {
+        navigator.navigateToPictureList(getContext(), stationId, stationName);
     }
 
     private void showProgressBar() {
@@ -170,7 +170,7 @@ public class StationListFragment extends BaseFragment<StationListPresenter, Stat
     }
 
     private void showRetryAction() {
-        snackbar = Snackbar.make(getView(), R.string.load_station_list_failed, Snackbar.LENGTH_LONG)
+        snackbar = Snackbar.make(getView(), R.string.error_occured, Snackbar.LENGTH_LONG)
                 .setAction(R.string.action_retry, v -> {
                     showProgressBar();
 
